@@ -1,0 +1,16 @@
+#working with Eureka wich is not running on defult port number 
+#Manual Registration of client in Eureka server
+#same machine but diff port number (If it is in diff machine the write IP ADDRS instread of Localhost)
+eureka:
+  client:
+    service-url:
+      defaultZone: ${DISCOVERY_URL:http://localhost:9187}/eureka/
+
+#server port
+server:
+  port: 3333
+  
+  #application name
+spring:
+  application:
+    name: HiService
